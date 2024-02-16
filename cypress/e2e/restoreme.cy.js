@@ -1,9 +1,9 @@
 ///<reference types="cypress"/>
 describe('Training test of restore me',()=>{
     // it('Add provider',()=>{
-    //     cy.visit('https://dashboard-qa.restoreme.care/')
-    //     cy.get('.login-form-input-field').first().type('admin@nurture.com')
-    //     cy.get('input[type="password"]').type('^wL<F0X1k4kE')
+    //     cy.visit(Cypress.env('qa_url'))
+    //     cy.get('.login-form-input-field').first().type(Cypress.env('username'))
+    //     cy.get('input[type="password"]').type(Cypress.env('password'))
     //     cy.get('.generic-button').click()
     //     // cy.wait(10000)
     //     cy.get('span[title="Providers"]',{timeout:30000}).should('have.text','Providers')
@@ -46,9 +46,9 @@ describe('Training test of restore me',()=>{
     // })
 
     it('Add patient',()=>{
-        cy.visit('https://dashboard-qa.restoreme.care/')
-        cy.get('.login-form-input-field').first().type('admin@nurture.com')
-        cy.get('input[type="password"]').type('^wL<F0X1k4kE')
+        cy.visit(Cypress.env('qa_url'))
+        cy.get('.login-form-input-field').first().type(Cypress.env('username'))
+        cy.get('input[type="password"]').type(Cypress.env('password'))
         cy.get('.generic-button').click()
         // cy.wait(10000)
         cy.get('span[title="Providers"]',{timeout:30000}).should('have.text','Providers')
@@ -56,7 +56,8 @@ describe('Training test of restore me',()=>{
 
 
         //Add patient
-        cy.contains('Patients').click()
+        cy.wait(2000)
+        cy.get('span[class*="patients-icon"]+span').click({ force: true })
         cy.get('span[title="Patients"]',{timeout:10000}).should('have.text','Patients')
         // cy.get('span[class="nurture-icon menu-icon"]').click()
 
