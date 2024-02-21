@@ -9,8 +9,7 @@ module.exports = defineConfig({
     },
     env: {
       qa_url:'https://dashboard-qa.restoreme.care/',
-      username: 'admin@nurture.com',
-      password: '^wL<F0X1k4kE',
+    
     },
   },
 });
