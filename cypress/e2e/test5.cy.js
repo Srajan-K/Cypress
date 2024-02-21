@@ -15,7 +15,7 @@ describe('Training test of restore me',()=>{
         cy.get('#user_login').type('username')
         cy.get('#user_password').type('password')
         cy.get('input[value="Sign in"]').should('be.visible').should('be.enabled');
-        cy.get('input[value="Sign in"]').trigger('mousemove').trigger('click')
+        cy.get('input[value="Sign in"]').trigger("mousemove").trigger("click")
         cy.wait(2000)
         cy.get('input[value="Sign in"]').trigger('click',{force:true})
         // cy.get('.brand').should('contain','Zero Bank')

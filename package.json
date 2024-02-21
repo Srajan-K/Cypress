@@ -5,11 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "test,test1",
-    "cy-open":"cypress open"
+    "cy-open": "cypress open"
   },
   "author": "Srajan",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^13.6.4"
+    "cypress": "^13.6.4",
+    "js-yaml": "^4.1.0",
+    "yamljs": "^0.3.0"
   }
 }
